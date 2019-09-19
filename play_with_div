@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Div modification</title>
+    <style>
+        .cl1{
+          height: 100px;
+          width:100px;
+        /*background-color: blue ;
+        display: inline-block ;*/
+            display: inline-block; 
+            border-style: solid;
+            border-width:3px;
+            border-color:black; 
+    
+        }
+        .cl2{
+            height: 100px;
+          width:100px;
+          display: inline-block; 
+         /* background-color:yellow ;*/
+            border-style: solid;
+            border-width:3px;
+            border-color:black; 
+    
+        }
+        .cl3{
+            height: 100px;
+             width:100px;
+             display: inline-block ;
+             border-style: solid;
+            border-width:3px;
+            border-color:black; 
+            /*background-color:brown;*/
+        }
+        div{
+            background-color: white;
+        }
+    </style>
+        
+
+    <script>
+         $(document).ready(function(){
+           // $("#change").click(function(){
+                //console.log("you clicked ");
+                /*if ( $("div").css('background-color') ==="white")
+                {
+                    $("div").css("background-color","red");  
+                }
+                else{
+                $("div").css("background-color","white");
+                }
+               /* $("#div2").css("background-color","yellow");
+                $("#div3").css("background-color","green");*/
+
+                var flag = 1;
+                 $("#change").click(function(){
+                    if(flag == 2){
+                        secondClick(); 
+                        console.log("switch to second");
+                        flag = 1;
+                         }
+                    else{
+                        firstClick(); 
+                        console.log("switch to first");
+                        flag = 2;
+                        }
+                    });
+
+  
+
+
+            $("#shape").click(function(){
+                console.log("you clicked ");
+                $("div").css("border-radius","100px");
+               /* $("#div2").css("border-radius","100px");
+                $("#div3").css("border-radius","100px");*/
+            });
+
+
+            $("#ext").click(function(){
+                $("#div3").after("<div style='display:inline-block;margin:0 0 0 5px;border-style: solid;height: 100px;width:100px; border-width:3px;border-color:black; '></div>");
+            });
+
+
+        });
+
+        function firstClick(){
+        $("div").css("background-color","red");
+        
+    }
+
+    function secondClick(){
+        $("div").css("background-color","");
+    }
+
+
+        </script>
+</head>
+<body>
+    <div class="cl1" id='div1'></div>
+    <div class="cl2" id='div2'></div>
+    <div class="cl3" id='div3'></div>
+    <form>
+        <input type="button" name='colorChanger' id="change" value="Color Changer">
+        <input type="button" name='ShapeChanger' id="shape" value="Shape Changer">
+        <input type="button" name='AddDiv' id="ext" value="Add  Extra   Div">
+    </form>
+    
+</body>
+</html>
