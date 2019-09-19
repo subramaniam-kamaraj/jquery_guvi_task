@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Document</title>
+
+    <script> 
+            $(document).ready(function(){
+                    $("input[name=btn]").click(function(){
+                        var bla = $('#nn').val();
+                        console.log(bla);
+                        $("ol"). append("<li>"+ bla +"</li>");
+                     });
+                });
+        </script> 
+</head>
+<body>
+    <form>
+    
+        <input type="text" name="t1" id="nn">
+        <input type="button" value="click" name='btn'>
+        
+    </form>
+    <ol>
+           
+        </ol>
+    
+</body>
+</html>
